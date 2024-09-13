@@ -181,3 +181,4 @@ Start importing  using Guid(63aee7e1ef9084645958c59467c17bc9) Importer(815301076
   ERROR: Unknown asset with GUID '63aee7e1ef9084645958c59467c17bc9'
   Import took 0.002172 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
