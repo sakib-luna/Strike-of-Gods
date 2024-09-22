@@ -223,7 +223,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.7881366, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -234,7 +234,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5762732, y: 2}
+  m_Size: {x: 4, y: 2}
   m_EdgeRadius: 0
 --- !u!61 &489578483
 BoxCollider2D:
@@ -407,7 +407,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Input: {x: 0, y: 0}
   rb: {fileID: 489578484}
-  speed: 5
+  movespeed1: 5
+  movespeed2: 2.5
+  movespeed3: 0
   regJump: 0
   isFacingRight: 1
 --- !u!1 &495233241
@@ -506,7 +508,7 @@ GameObject:
   - component: {fileID: 985403398}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
