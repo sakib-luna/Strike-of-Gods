@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
    public float movespeed1; // normal movement speed
    public float movespeed2; // moving back movement speed
    public float movespeed3; // running movment speed 
-   public float regJump; 
+   public float regJump; // How high the character will jump
    public int jsFrame; 
    public int jsFrameStart;
    public bool isFacingRight = true; 
@@ -26,16 +26,31 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+  
     }
 
     // Update is called once per frame
     void Update()
     {
        MovementFunction();
-       Jump();
        
+       //////////// JUMP FUNCTION START /////////////////
+       if(Input.y > 0 && isGrounded == true)
+       {
+          jumpSquat = true;
+       }
 
+       if(jumpSquat == true && jsFrame != 0)
+       {
+          jsFrame -= 1;
+       }
+       else if (jsFrame == 0) 
+       {
+         Debug.Log("Player has jumped");
+         jumpSquat = false; 
+         jsFrame = jsFrameStart;  
+       }
+       //////////// JUMP FUNCTION END /////////////////
     }
 
     ///////////MOVEMENT//////////////
@@ -74,25 +89,6 @@ public class PlayerMovement : MonoBehaviour
         {
              isGrounded = true;
         }
-    }
-
-    private void Jump()
-    {
-      if(Input.y > 0 && isGrounded == true)
-       {
-          jumpSquat = true;
-       }
-
-       if(jumpSquat = true && jsFrame != 0)
-       {
-          jsFrame -= 1;
-       }
-       else
-       {
-         Debug.Log("Player has jumped");
-         jumpSquat = false; 
-         jsFrame = jsFrameStart;
-       }
     }
 
     ///////ATTACKING/////////

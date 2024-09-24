@@ -22,37 +22,37 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50390
+50976
 Successfully changed project path to: /Users/student/Documents/GitHub/Strike-of-Gods
-Could not lock editor preferences. Preferences updates for this instance of Unity will not be saved./Users/student/Documents/GitHub/Strike-of-Gods
+/Users/student/Documents/GitHub/Strike-of-Gods
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 38.70 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 33.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.27f1 (e759542391ea)
 [Subsystems] Discovering subsystems at path /Applications/2020.3.27f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/student/Documents/GitHub/Strike-of-Gods/Assets
 GfxDevice: creating device client; threaded=0
-2024-09-20 13:41:48.247 Unity[2708:97667] iMac preferred device: AMD Radeon Pro 5500 XT (high power)
-2024-09-20 13:41:48.247 Unity[2708:97667] Metal devices available: 1
-2024-09-20 13:41:48.247 Unity[2708:97667] 0: AMD Radeon Pro 5500 XT (high power)
-2024-09-20 13:41:48.248 Unity[2708:97667] Using device AMD Radeon Pro 5500 XT (high power)
+2024-09-24 13:42:52.955 Unity[3033:121163] iMac preferred device: AMD Radeon Pro 5500 XT (high power)
+2024-09-24 13:42:52.955 Unity[3033:121163] Metal devices available: 1
+2024-09-24 13:42:52.955 Unity[3033:121163] 0: AMD Radeon Pro 5500 XT (high power)
+2024-09-24 13:42:52.955 Unity[3033:121163] Using device AMD Radeon Pro 5500 XT (high power)
 Initializing Metal device caps: AMD Radeon Pro 5500 XT
 Initialize mono
 Mono path[0] = '/Applications/2020.3.27f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/2020.3.27f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/2020.3.27f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56033
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/2020.3.27f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000449 seconds.
+Registered in 0.000457 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 33.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 33.29 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.525 seconds
+- Completed reload, in  0.523 seconds
 Domain Reload Profiling:
-	ReloadAssembly (525ms)
+	ReloadAssembly (523ms)
 		BeginReloadAssembly (37ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
@@ -60,62 +60,62 @@ Domain Reload Profiling:
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		EndReloadAssembly (422ms)
-			LoadAssemblies (37ms)
+			LoadAssemblies (36ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (158ms)
+			SetupTypeCache (157ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
+			RebuildScriptCaches (33ms)
 			SetupLoadedEditorAssemblies (160ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (34ms)
+				RefreshPlugins (33ms)
 				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (89ms)
-				ProcessInitializeOnLoadMethodAttributes (27ms)
+				ProcessInitializeOnLoadAttributes (90ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002858 seconds.
+Registered in 0.001768 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 33.25 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 32.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.044 seconds
+- Completed reload, in  1.002 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1045ms)
+	ReloadAssembly (1003ms)
 		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (854ms)
-			LoadAssemblies (92ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (815ms)
+			LoadAssemblies (65ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (307ms)
+			SetupTypeCache (306ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (292ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (284ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (33ms)
 				BeforeProcessingInitializeOnLoad (50ms)
-				ProcessInitializeOnLoadAttributes (189ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
+				ProcessInitializeOnLoadAttributes (184ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
 				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Validating Project structure ... 0.000192 seconds.
+Validating Project structure ... 0.000158 seconds.
 Shader import version has changed; will reimport all shaders...
-Upgrading shader files ...0.000200 seconds.
+Upgrading shader files ...0.000208 seconds.
 Application.AssetDatabase Initial Script Refresh Start
 RefreshInfo: InitialScriptRefreshV2(NoUpdateAssetOptions) scanfilter:  ... 1 filters
 RefreshProfiler: Total: 0.000ms
@@ -125,18 +125,18 @@ Application.AssetDatabase.Refresh End
 RefreshInfo: StopAssetImportingV2(ForceSynchronousImport) scanfilter: 
 RefreshProfiler: Total: 0.000ms
 Launching external process: /Applications/2020.3.27f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
 Initializing Unity extensions:
 ========================================================================
 Worker process is ready to serve import requests
-Refreshing native plugins compatible for Editor in 0.26 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.23 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2198 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 212.1 MB.
+System memory in use before: 212.0 MB.
 System memory in use after: 211.2 MB.
 
 Unloading 107 unused Assets to reduce memory usage. Loaded Objects now: 2664.
-Total: 2.808380 ms (FindLiveObjects: 0.150203 ms CreateObjectMapping: 0.076398 ms MarkObjects: 2.149578 ms  DeleteObjects: 0.431617 ms)
+Total: 2.754062 ms (FindLiveObjects: 0.145118 ms CreateObjectMapping: 0.069713 ms MarkObjects: 2.111949 ms  DeleteObjects: 0.426780 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -150,57 +150,41 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Open Sprite Shape.prefab
-  artifactKey: Guid(86ae7de409eb54f619fb1328e4d42480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Open Sprite Shape.prefab using Guid(86ae7de409eb54f619fb1328e4d42480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c78a7b90d603d0a33c7b4e3280488626') in 0.943891 seconds 
-  Import took 0.949221 seconds .
+  path: Assets/Storm Gust.ttf
+  artifactKey: Guid(a5372f189061e485eb3cb5d1ae04073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Storm Gust.ttf using Guid(a5372f189061e485eb3cb5d1ae04073a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf46e765b41ba16e7463d976e27231d') in 1.343677 seconds 
+  Import took 1.348883 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Closed Sprite Shape.prefab
-  artifactKey: Guid(c0583b4e855c74b8c82e7b9b5efb5ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.2d.spriteshape/Editor/ObjectMenuCreation/DefaultAssets/Sprite Shapes/Closed Sprite Shape.prefab using Guid(c0583b4e855c74b8c82e7b9b5efb5ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d633a999cd0db5a929fdc6b8a7f437c') in 0.009401 seconds 
-  Import took 0.012484 seconds .
+  Time since last request: 0.000228 seconds.
+  path: Assets/Storm Gust 1.ttf
+  artifactKey: Guid(8f36ea12d3e614b199355bad9e06f93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Storm Gust 1.ttf using Guid(8f36ea12d3e614b199355bad9e06f93a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a81e763c4208ed3a54a5770b2c9999e5') in 0.010113 seconds 
+  Import took 0.012573 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.061200 seconds.
-  path: Assets/Scenes/Red's Scene.unity
-  artifactKey: Guid(18496834167854a73a5c37f459302998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Red's Scene.unity using Guid(18496834167854a73a5c37f459302998) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b7d7e9b8d82658fa559ecf4e514d04') in 0.001160 seconds 
-  Import took 0.004569 seconds .
+  Time since last request: 72.508752 seconds.
+  path: Assets/Fonts
+  artifactKey: Guid(657ac07806b7c4deca15298a4ed7c7f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts using Guid(657ac07806b7c4deca15298a4ed7c7f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4fff8878bb466682db7896abea44d7d') in 0.001874 seconds 
+  Import took 0.004590 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.442209 seconds.
-  path: Assets/Scenes/LazyLionScene.unity
-  artifactKey: Guid(63aee7e1ef9084645958c59467c17bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/LazyLionScene.unity using Guid(63aee7e1ef9084645958c59467c17bc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a43d7c7eb974fccd1c85c299a30490a') in 0.001227 seconds 
-  Import took 0.004563 seconds .
+  Time since last request: 8.560979 seconds.
+  path: Assets/Fonts/Storm Gust.ttf
+  artifactKey: Guid(860a29b9da8004b18af784a568c24f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Storm Gust.ttf using Guid(860a29b9da8004b18af784a568c24f73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7935efad8b7d409fb0619458e2907eb9') in 0.010041 seconds 
+  Import took 0.012984 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.070884 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fa0b607c43d12d5d8081a89de6beb5') in 0.001143 seconds 
-  Import took 0.004459 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.883607 seconds.
-  path: Assets/Scenes/SOG.unity
-  artifactKey: Guid(d81e7978395b246b5ad1fa7472b4ae37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SOG.unity using Guid(d81e7978395b246b5ad1fa7472b4ae37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c32099754f412ff011f3f4eaecfc5949') in 0.001049 seconds 
-  Import took 0.003920 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.768005 seconds.
-  path: Assets/Scenes/testing scene .unity
-  artifactKey: Guid(3e973372dab734e0eb6f60794d4b9b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/testing scene .unity using Guid(3e973372dab734e0eb6f60794d4b9b12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55d91ccef54f9813e4cc991609fa632c') in 0.001120 seconds 
-  Import took 0.004688 seconds .
+  Time since last request: 3.745744 seconds.
+  path: Assets/Fonts/Storm Gust.otf
+  artifactKey: Guid(26a7ddf4facac4da7a801aea670da21c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Storm Gust.otf using Guid(26a7ddf4facac4da7a801aea670da21c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8c86fb107d9c7df944addbd6ca08d88') in 1.138695 seconds 
+  Import took 1.143838 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
