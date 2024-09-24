@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
    public float movespeed3; // running movment speed 
    public float regJump; 
    public int jsFrame; 
+   public int jsFrameStart;
    public bool isFacingRight = true; 
     bool isCrouching; 
     bool isGrounded = false;
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
        MovementFunction();
-
+       Jump();
        
 
     }
@@ -79,7 +80,18 @@ public class PlayerMovement : MonoBehaviour
     {
       if(Input.y > 0 && isGrounded == true)
        {
-          
+          jumpSquat = true;
+       }
+
+       if(jumpSquat = true && jsFrame != 0)
+       {
+          jsFrame -= 1;
+       }
+       else
+       {
+         Debug.Log("Player has jumped");
+         jumpSquat = false; 
+         jsFrame = jsFrameStart;
        }
     }
 
