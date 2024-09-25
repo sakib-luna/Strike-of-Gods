@@ -16,9 +16,10 @@ public class PlayerMovement : MonoBehaviour
    public float regJump; // How high the character will jump
    public int jsFrame; 
    public int jsFrameStart;
+   public int doubleJumps; 
    public bool isFacingRight = true; 
     bool isCrouching; 
-    bool isGrounded = false;
+   public bool isGrounded = false;
     bool jumpSquat; 
    private CharacterController playerController; 
 
@@ -46,11 +47,20 @@ public class PlayerMovement : MonoBehaviour
        }
        else if (jsFrame == 0) 
        {
+         rb.AddForce(Vector3.up * regJump, ForceMode2D.Impulse);
          Debug.Log("Player has jumped");
          jumpSquat = false; 
-         jsFrame = jsFrameStart;  
+         jsFrame = jsFrameStart;
+         isGrounded = false; 
        }
        //////////// JUMP FUNCTION END /////////////////
+    }
+
+    void FixedUpdate()
+    {
+        ////////CHARACTER FLIP FUNCTION///////////////
+
+
     }
 
     ///////////MOVEMENT//////////////
