@@ -47,8 +47,9 @@ public class PlayerMovement : MonoBehaviour
        }
        else if (jsFrame == 0) 
        {
-         rb.AddForce(Vector3.up * regJump, ForceMode2D.Impulse);
-         Debug.Log("Player has jumped");
+          rb.velocity = new Vector2(rb.velocity.x, regJump);
+         //rb.AddForce(Vector2.up * regJump, ForceMode2D.Impulse); // this could be use as one of the ways to jump 
+         // Debug.Log("Player has jumped");
          jumpSquat = false; 
          jsFrame = jsFrameStart;
          isGrounded = false; 
@@ -83,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         isCrouching = false; 
        }
 
-       if((isFacingRight == true && Input.x < 0) || (isFacingRight == false && Input.x > 0))
+       if((isFacingRight == true && Input.x < 0 && isGrounded == true) || (isFacingRight == false && Input.x > 0 && isGrounded ==true))
        {
          speed = movespeed2; 
        }
@@ -97,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
     {
        if (collision.gameObject.CompareTag("Ground"))
         {
-             isGrounded = true;
+          isGrounded = true;
         }
     }
 
