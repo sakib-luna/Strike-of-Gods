@@ -18,15 +18,19 @@ public class PlayerMovement : MonoBehaviour
    public int jsFrameStart;
    public int doubleJumps; 
    public bool isFacingRight = true; 
-    bool isCrouching; 
+   bool isCrouching; 
    public bool isGrounded = false;
-    bool jumpSquat; 
+   bool jumpSquat; 
    private CharacterController playerController; 
+   private Animator animation;
+   public LayerMask yourLayer;
+   public LayerMask opsLayer;
 
 
     // Start is called before the first frame update
     void Start()
     {
+       animation = GetComponent<Animator>();
   
     }
 
@@ -47,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
        }
        else if (jsFrame == 0) 
        {
-          rb.velocity = new Vector2(rb.velocity.x, regJump);
+         //animation.SetTrigger("jump");
+         rb.velocity = new Vector2(rb.velocity.x, regJump);
          //rb.AddForce(Vector2.up * regJump, ForceMode2D.Impulse); // this could be use as one of the ways to jump 
          // Debug.Log("Player has jumped");
          jumpSquat = false; 
@@ -60,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         ////////CHARACTER FLIP FUNCTION///////////////
-
+       // RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position, ) 
 
     }
 
