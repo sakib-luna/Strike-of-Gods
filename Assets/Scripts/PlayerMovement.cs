@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
    private Animator animation;
    public LayerMask yourLayer;
    public LayerMask opsLayer;
+   // public GameObject cube; 
 
 
     // Start is called before the first frame update
@@ -65,8 +66,15 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         ////////CHARACTER FLIP FUNCTION///////////////
-       // RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position, ) 
-
+        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(2,0), new Vector2(2,20), 0, Vector2.right, opsLayer);  
+        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-2,0), new Vector2(2,20), 0, Vector2.left, opsLayer);
+        /*
+        if (leftSideDetector = collider || rightSideDetector = collider)
+        {
+          Debug.Log("your opponent is near you"); 
+        }
+       */ 
+        
     }
 
     ///////////MOVEMENT//////////////
