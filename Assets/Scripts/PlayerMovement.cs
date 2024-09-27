@@ -69,11 +69,11 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(2,0), new Vector2(2,20), 0, Vector2.right, opsLayer);  
         RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-2,0), new Vector2(2,20), 0, Vector2.left, opsLayer);
         /*
-        if (leftSideDetector = collider || rightSideDetector = collider)
+        if (leftSideDetector.GetComponent<Rigidbody2D>() != null || rightSideDetector.GetComponent<Rigidbody2D>() != null)
         {
           Debug.Log("your opponent is near you"); 
         }
-       */ 
+        */
         
     }
 
