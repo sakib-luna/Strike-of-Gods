@@ -62,21 +62,28 @@ public class PlayerMovement : MonoBehaviour
        }
        //////////// JUMP FUNCTION END /////////////////
     }
-
+    
     void FixedUpdate()
     {
         ////////CHARACTER FLIP FUNCTION///////////////
-        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(2,0), new Vector2(2,20), 0, Vector2.right, opsLayer);  
-        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-2,0), new Vector2(2,20), 0, Vector2.left, opsLayer);
-        /*
-        if (leftSideDetector.GetComponent<Rigidbody2D>() != null || rightSideDetector.GetComponent<Rigidbody2D>() != null)
+        
+        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1,0), new Vector2(0.5f,5), 0, Vector2.right, opsLayer);  
+        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1,0), new Vector2(0.5f,5), 0, Vector2.left, opsLayer);
+        
+        
+        if(rightSideDetector.collider.gameObject.GetComponent<Rigidbody2D>() != null)
         {
           Debug.Log("your opponent is near you"); 
         }
-        */
-        
     }
 
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue; 
+        Gizmos.DrawCube(rb.position + new Vector2(1,0), new Vector2(0.5f,5));
+        Gizmos.DrawCube(rb.position + new Vector2(-1,0), new Vector2(0.5f,5));
+    }
+    
     ///////////MOVEMENT//////////////
     public void Move(InputAction.CallbackContext context)
     {
