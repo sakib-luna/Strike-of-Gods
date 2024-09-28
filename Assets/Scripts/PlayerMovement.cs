@@ -38,9 +38,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       MovementFunction();
        
-       //////////// JUMP FUNCTION START /////////////////
+    }
+    
+    void FixedUpdate()
+    {
+      MovementFunction();
+       
+       /////////////////////////// JUMP FUNCTION START //////////////////////////
        if(Input.y > 0 && isGrounded == true)
        {
           jumpSquat = true;
@@ -60,21 +65,23 @@ public class PlayerMovement : MonoBehaviour
          jsFrame = jsFrameStart;
          isGrounded = false; 
        }
-       //////////// JUMP FUNCTION END /////////////////
-    }
-    
-    void FixedUpdate()
-    {
-        ////////CHARACTER FLIP FUNCTION///////////////
-        
+        ////////////////////////// JUMP FUNCTION END ///////////////////
+
+      //////////////////////////CHARACTER FLIP FUNCTION///////////////////////////////////////
+       
         RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1,0), new Vector2(0.5f,5), 0, Vector2.right, opsLayer);  
         RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1,0), new Vector2(0.5f,5), 0, Vector2.left, opsLayer);
         
-        
-        if(rightSideDetector.collider.gameObject.GetComponent<Rigidbody2D>() != null)
+        /*
+        if(rightSideDetector.collider != null)
         {
-          Debug.Log("your opponent is near you"); 
+          var p2Rb = rightSideDetector.collider.GetComponent<Rigidbody2D>();
+          if (p2Rb != null)
+          {
+                Debug.Log("you are near your opponent");
+          }
         }
+        */
     }
 
     void OnDrawGizmos()
@@ -84,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawCube(rb.position + new Vector2(-1,0), new Vector2(0.5f,5));
     }
     
-    ///////////MOVEMENT//////////////
+////////////////////////////////   MOVEMENT     //////////////////////////////////////
     public void Move(InputAction.CallbackContext context)
     {
         Input.x = context.ReadValue<Vector2>().x;
@@ -122,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    ///////ATTACKING/////////
+//////////////////ATTACKING/////////////////////////
     
     //fun fact: a slight tap on a button or probaly any button last for 3 frames.
     
