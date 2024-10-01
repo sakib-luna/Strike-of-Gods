@@ -69,11 +69,10 @@ public class PlayerMovement : MonoBehaviour
 
       //////////////////////////CHARACTER FLIP FUNCTION///////////////////////////////////////
        
-        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1,0), new Vector2(0.5f,5), 0, Vector2.right, opsLayer);  
-        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1,0), new Vector2(0.5f,5), 0, Vector2.left, opsLayer);
+        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1,0), new Vector2(0.5f,5), 0, Vector2.right, opsLayer, 0, ~opsLayer);  
+        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1,0), new Vector2(0.5f,5), 0, Vector2.left, opsLayer, 0, ~opsLayer);
         
-        /*
-        if(rightSideDetector.collider != null)
+        if(rightSideDetector.collider != null && rightSideDetector.collider.gameObject != this.gameObject)
         {
           var p2Rb = rightSideDetector.collider.GetComponent<Rigidbody2D>();
           if (p2Rb != null)
@@ -81,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("you are near your opponent");
           }
         }
-        */
+      
     }
 
     void OnDrawGizmos()
