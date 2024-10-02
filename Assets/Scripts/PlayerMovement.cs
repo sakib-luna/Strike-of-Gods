@@ -69,19 +69,35 @@ public class PlayerMovement : MonoBehaviour
 
       //////////////////////////CHARACTER FLIP FUNCTION///////////////////////////////////////
        
-        RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1,0), new Vector2(0.5f,5), 0, Vector2.right, opsLayer);  
-        RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1,0), new Vector2(0.5f,5), 0, Vector2.left, opsLayer);
-        
-        /*
-        if(rightSideDetector.collider != null)
-        {
-          var p2Rb = rightSideDetector.collider.GetComponent<Rigidbody2D>();
-          if (p2Rb != null)
-          {
-                Debug.Log("you are near your opponent");
-          }
-        }
-        */
+       // Define the size and direction for the BoxCast
+    
+       Vector2 boxSize = new Vector2(0.5f, 5);
+    
+      float distance = 0.1f; // Small distance to check for collisions
+      // Check for collisions on the right side
+      
+      RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1, 0), boxSize, 0, Vector2.right, distance, opsLayer);
+      
+      // Check for collisions on the left side
+      
+      RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1, 0), boxSize, 0, Vector2.left, distance, opsLayer);
+      
+      // Flip the GameObject based on the collision
+      
+      if (rightSideDetector.collider != null && rightSideDetector.collider.gameObject != this.gameObject)
+    {
+        transform.localScale = new Vector3(1, 1, 1); // Flip to face right
+        isFacingRight = true;
+        Debug.Log("right");
+    }
+    
+    else if (leftSideDetector.collider != null && leftSideDetector.collider.gameObject != this.gameObject)
+    {
+        transform.localScale = new Vector3(-1, 1, 1); // Flip to face left
+        isFacingRight = false;
+        Debug.Log("left");
+    }
+    
     }
 
     void OnDrawGizmos()
