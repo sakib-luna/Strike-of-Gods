@@ -217,9 +217,9 @@ GameObject:
   - component: {fileID: 489578480}
   - component: {fileID: 489578485}
   - component: {fileID: 489578486}
-  - component: {fileID: 489578483}
   - component: {fileID: 489578482}
   - component: {fileID: 489578484}
+  - component: {fileID: 489578483}
   m_Layer: 6
   m_Name: 'Test player '
   m_TagString: Untagged
@@ -319,8 +319,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 2}
   m_EdgeRadius: 0
---- !u!61 &489578483
-BoxCollider2D:
+--- !u!70 &489578483
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -333,18 +333,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!50 &489578484
 Rigidbody2D:
   serializedVersion: 4
@@ -499,12 +489,7 @@ MonoBehaviour:
   doubleJumps: 1
   isFacingRight: 1
   isGrounded: 0
-  yourLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  opsLayer:
-    serializedVersion: 2
-    m_Bits: 128
+  playerTemplate: {fileID: 11400000, guid: c2e6fb0c6d30742dc98936af1c3ce8de, type: 2}
 --- !u!1 &495233241
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,9 +776,9 @@ GameObject:
   - component: {fileID: 1256933936}
   - component: {fileID: 1256933935}
   - component: {fileID: 1256933934}
-  - component: {fileID: 1256933933}
   - component: {fileID: 1256933932}
   - component: {fileID: 1256933931}
+  - component: {fileID: 1256933933}
   m_Layer: 7
   m_Name: Test player  (1)
   m_TagString: Untagged
@@ -848,8 +833,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 2}
   m_EdgeRadius: 0
---- !u!61 &1256933933
-BoxCollider2D:
+--- !u!70 &1256933933
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -862,18 +847,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Direction: 0
 --- !u!114 &1256933934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,12 +872,7 @@ MonoBehaviour:
   doubleJumps: 1
   isFacingRight: 1
   isGrounded: 0
-  yourLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  opsLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  playerTemplate: {fileID: 11400000, guid: 8bb19ed7f08da4561a925c152a50dbb9, type: 2}
 --- !u!114 &1256933935
 MonoBehaviour:
   m_ObjectHideFlags: 0

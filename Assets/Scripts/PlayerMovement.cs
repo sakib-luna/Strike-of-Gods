@@ -22,17 +22,19 @@ public class PlayerMovement : MonoBehaviour
    public bool isGrounded = false;
    bool jumpSquat; 
    private CharacterController playerController; 
-   private Animator animation;
-   public LayerMask yourLayer;
-   public LayerMask opsLayer;
+   public PlayerTemplate playerTemplate; 
+    private LayerMask yourLayer;
+   private LayerMask opsLayer;
+ 
    // public GameObject cube; 
 
 
     // Start is called before the first frame update
     void Start()
     {
-       animation = GetComponent<Animator>();
-  
+
+       yourLayer = playerTemplate.yourLayer; 
+       opsLayer = playerTemplate.opsLayer;
     }
 
     // Update is called once per frame
@@ -76,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
       float distance = 0.1f; // Small distance to check for collisions
       // Check for collisions on the right side
       
-      RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(1, 0), boxSize, 0, Vector2.right, distance, opsLayer);
+      RaycastHit2D rightSideDetector = Physics2D.BoxCast(rb.position + new Vector2(2, 0), boxSize, 0, Vector2.right, distance, opsLayer);
       
       // Check for collisions on the left side
       
-      RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-1, 0), boxSize, 0, Vector2.left, distance, opsLayer);
+      RaycastHit2D leftSideDetector = Physics2D.BoxCast(rb.position + new Vector2(-2, 0), boxSize, 0, Vector2.left, distance, opsLayer);
       
       // Flip the GameObject based on the collision
       
@@ -88,14 +90,12 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.localScale = new Vector3(1, 1, 1); // Flip to face right
         isFacingRight = true;
-        Debug.Log("right");
     }
     
     else if (leftSideDetector.collider != null && leftSideDetector.collider.gameObject != this.gameObject)
     {
         transform.localScale = new Vector3(-1, 1, 1); // Flip to face left
         isFacingRight = false;
-        Debug.Log("left");
     }
     
     }
@@ -103,8 +103,8 @@ public class PlayerMovement : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue; 
-        Gizmos.DrawCube(rb.position + new Vector2(1,0), new Vector2(0.5f,5));
-        Gizmos.DrawCube(rb.position + new Vector2(-1,0), new Vector2(0.5f,5));
+        Gizmos.DrawCube(rb.position + new Vector2(2,0), new Vector2(0.5f,5));
+        Gizmos.DrawCube(rb.position + new Vector2(-2,0), new Vector2(0.5f,5));
     }
     
 ////////////////////////////////   MOVEMENT     //////////////////////////////////////
