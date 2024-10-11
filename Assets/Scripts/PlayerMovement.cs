@@ -16,7 +16,8 @@ public class PlayerMovement : MonoBehaviour
    public float regJump; // How high the character will jump
    public int jsFrame; 
    public int jsFrameStart;
-   public int doubleJumps; 
+   public int doubleJumps;
+   public int airMovementFrames;  
    public bool isFacingRight = true; 
    bool isCrouching; 
    public bool isGrounded = false;
@@ -61,8 +62,6 @@ public class PlayerMovement : MonoBehaviour
        {
          //animation.SetTrigger("jump");
          rb.velocity = new Vector2(rb.velocity.x, regJump);
-         //rb.AddForce(Vector2.up * regJump, ForceMode2D.Impulse); // this could be use as one of the ways to jump 
-         // Debug.Log("Player has jumped");
          jumpSquat = false; 
          jsFrame = jsFrameStart;
          isGrounded = false; 
@@ -126,12 +125,23 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector2.right * Input.x * Time.deltaTime * speed);
         isCrouching = false; 
        }
-
+       /*
+       if(isCrouching == false && isGrounded == false && airMovementFrames > 0 && isFacingRight == true)
+       {
+         Input.x = 0;
+       }
+       else if(isCrouching == false && isGrounded == false && airMovementFrames > 0 && isFacingRight == false)
+       {
+         Input.x = 0;
+       }
+       */
+       
+       // changes the speed of your character depending on what side you are facing 
        if((isFacingRight == true && Input.x < 0 && isGrounded == true) || (isFacingRight == false && Input.x > 0 && isGrounded ==true))
        {
          speed = movespeed2; 
        }
-       else
+       else if((isFacingRight == true && Input.x > 0 && isGrounded == true) || (isFacingRight == false && Input.x < 0 && isGrounded ==true)) 
        {
          speed = movespeed1; 
        }
@@ -142,6 +152,11 @@ public class PlayerMovement : MonoBehaviour
        if (collision.gameObject.CompareTag("Ground"))
         {
           isGrounded = true;
+          airMovementFrames = 5;
+        }
+        else
+        {
+          airMovementFrames -= 1; 
         }
     }
 
