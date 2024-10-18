@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
    public PlayerTemplate playerTemplate; 
     private LayerMask yourLayer;
    private LayerMask opsLayer;
- 
+   enum motionInput{}; 
    // public GameObject cube; 
 
 
