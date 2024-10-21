@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
    public PlayerTemplate playerTemplate; 
     private LayerMask yourLayer;
    private LayerMask opsLayer;
-   enum motionInput{}; 
+  // String[] inputCommand; //work on this later
+   //enum motionInput{}; 
    // public GameObject cube; 
 
 
@@ -96,7 +97,8 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = new Vector3(-1, 1, 1); // Flip to face left
         isFacingRight = false;
     }
-    
+    //////////////motion input////////////
+
     }
 
     void OnDrawGizmos()
