@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 161556352}
   - component: {fileID: 161556351}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: left wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +735,7 @@ Camera:
   far clip plane: 1000
   field of view: 87.7
   orthographic: 1
-  orthographic size: 6.679137
+  orthographic size: 8.044112
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 777673776}
   - component: {fileID: 777673775}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: right wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 985403399}
   - component: {fileID: 985403398}
   m_Layer: 8
-  m_Name: Square
+  m_Name: ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1450,7 +1450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2961045199554191132, guid: a6b1857b984aaf64cabb8ffb8a4ef168, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.01
+      value: 2.35
       objectReference: {fileID: 0}
     - target: {fileID: 2961045199554191132, guid: a6b1857b984aaf64cabb8ffb8a4ef168, type: 3}
       propertyPath: m_LocalPosition.z
