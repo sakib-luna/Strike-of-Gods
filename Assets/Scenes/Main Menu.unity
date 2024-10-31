@@ -624,7 +624,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gallary
+  m_text: Gallery
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4da9cda8ed2774b08a88e23a3c40736b, type: 2}
   m_sharedMaterial: {fileID: 5606447896651333580, guid: 4da9cda8ed2774b08a88e23a3c40736b, type: 2}
