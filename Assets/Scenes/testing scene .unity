@@ -926,7 +926,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1525673517}
   - component: {fileID: 1525673516}
-  - component: {fileID: 1525673515}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -934,25 +933,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1525673515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525673514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &1525673516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,7 +1101,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1846319266995829863, guid: f82b15c2347f5404793963e3781955fd, type: 3}
       propertyPath: regJump
-      value: 20
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846319266995829863, guid: f82b15c2347f5404793963e3781955fd, type: 3}
+      propertyPath: movespeed1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846319266995829863, guid: f82b15c2347f5404793963e3781955fd, type: 3}
+      propertyPath: movespeed2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1846319266995829880, guid: f82b15c2347f5404793963e3781955fd, type: 3}
       propertyPath: m_RootOrder
@@ -1279,7 +1267,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7390993351731573477, guid: 8088100a43153a84188246929b3dda1b, type: 3}
       propertyPath: regJump
-      value: 20
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390993351731573477, guid: 8088100a43153a84188246929b3dda1b, type: 3}
+      propertyPath: movespeed1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390993351731573477, guid: 8088100a43153a84188246929b3dda1b, type: 3}
+      propertyPath: movespeed2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7390993351731573478, guid: 8088100a43153a84188246929b3dda1b, type: 3}
       propertyPath: m_ActionEvents.Array.size
